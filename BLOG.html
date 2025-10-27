@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Hub</title>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 font-sans">
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold text-indigo-600">ContentHub</h1>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="#"
+              class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+            <a href="#"
+              class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+            <a href="#"
+              class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+            <a href="#"
+              class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+          </div>
+        </div>
+        <div class="md:hidden">
+          <button class="text-gray-700 hover:text-indigo-600 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Discover Amazing Content</h2>
+      <p class="text-xl text-gray-600">Click on any box below to explore detailed information</p>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Box 1 -->
+      <div
+        class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:scale-105"
+        onclick="openModal(1)">
+        <div class="p-6">
+          <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Innovation Technology</h3>
+          <p class="text-gray-600 text-sm">Discover cutting-edge technologies that are revolutionizing industries
+            worldwide. From artificial intelligence to quantum computing, explore the future...</p>
+        </div>
+      </div>
+
+      <!-- Box 2 -->
+      <div
+        class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:scale-105"
+        onclick="openModal(2)">
+        <div class="p-6">
+          <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Health & Wellness</h3>
+          <p class="text-gray-600 text-sm">Learn about maintaining optimal health through balanced nutrition, regular
+            exercise, and mindful practices that enhance your overall well-being...</p>
+        </div>
+      </div>
+
+      <!-- Box 3 -->
+      <div
+        class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:scale-105"
+        onclick="openModal(3)">
+        <div class="p-6">
+          <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Education Excellence</h3>
+          <p class="text-gray-600 text-sm">Explore innovative learning methodologies and educational approaches that
+            foster creativity, critical thinking, and lifelong learning in students...</p>
+        </div>
+      </div>
+
+      <!-- Box 4 -->
+      <div
+        class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:scale-105"
+        onclick="openModal(4)">
+        <div class="p-6">
+          <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Business Growth</h3>
+          <p class="text-gray-600 text-sm">Discover proven strategies for scaling your business, from startup
+            fundamentals to advanced growth hacking techniques that drive sustainable success...</p>
+        </div>
+      </div>
+
+      <!-- Box 5 -->
+      <div
+        class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:scale-105"
+        onclick="openModal(5)">
+        <div class="p-6">
+          <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Sustainable Living</h3>
+          <p class="text-gray-600 text-sm">Learn practical ways to reduce your environmental footprint while maintaining
+            a comfortable lifestyle through eco-friendly choices and sustainable practices...</p>
+        </div>
+      </div>
+
+      <!-- Box 6 -->
+      <div
+        class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:scale-105"
+        onclick="openModal(6)">
+        <div class="p-6">
+          <div class="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Creative Arts</h3>
+          <p class="text-gray-600 text-sm">Explore various forms of artistic expression from traditional painting and
+            sculpture to digital art and multimedia installations that inspire creativity...</p>
+        </div>
+      </div>
+
+      <!-- Box 7 -->
+      <div
+        class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:scale-105"
+        onclick="openModal(7)">
+        <div class="p-6">
+          <div class="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Community Building</h3>
+          <p class="text-gray-600 text-sm">Understand the importance of strong communities and learn effective
+            strategies for bringing people together to create positive social impact...</p>
+        </div>
+      </div>
+
+      <!-- Box 8 -->
+      <div
+        class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:scale-105"
+        onclick="openModal(8)">
+        <div class="p-6">
+          <div class="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Global Perspectives</h3>
+          <p class="text-gray-600 text-sm">Gain insights into different cultures, international relations, and global
+            challenges that shape our interconnected world and future generations...</p>
+        </div>
+      </div>
+
+      <!-- Box 9 -->
+      <div
+        class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:scale-105"
+        onclick="openModal(9)">
+        <div class="p-6">
+          <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Innovation Lab</h3>
+          <p class="text-gray-600 text-sm">Dive into experimental projects and breakthrough innovations that push the
+            boundaries of what's possible in science, technology, and human achievement...</p>
+        </div>
+      </div>
+
+      <!-- Box 10 -->
+      <div
+        class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:scale-105"
+        onclick="openModal(10)">
+        <div class="p-6">
+          <div class="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 7a4 4 0 11-8 0 4 4 0 018 0zM9 14a4 4 0 01-4-4m4 4v6m0-6a4 4 0 014-4m-4 4H5m4 0h4"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Future Trends</h3>
+          <p class="text-gray-600 text-sm">Stay ahead of the curve by exploring emerging trends and predictions that
+            will shape tomorrow's world in technology, society, and culture...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <div class="p-6">
+        <div class="flex justify-between items-start mb-4">
+          <h2 id="modalTitle" class="text-2xl font-bold text-gray-800"></h2>
+          <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
+        </div>
+        <div id="modalContent" class="text-gray-600 leading-relaxed"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const contentData = {
+      1: {
+        title: "Innovation Technology",
+        content: "Discover cutting-edge technologies that are revolutionizing industries worldwide. From artificial intelligence to quantum computing, explore the future of innovation. Machine learning algorithms are transforming how we process data, while blockchain technology is creating new paradigms for secure transactions. Virtual and augmented reality are reshaping entertainment, education, and professional training. The Internet of Things connects everyday objects to create smart environments that respond to our needs. Robotics and automation are enhancing productivity while raising important questions about the future of work. Biotechnology advances are opening new frontiers in medicine and agriculture. These technological innovations are not just changing how we work and live, but fundamentally altering our understanding of what's possible in the digital age."
+      },
+      2: {
+        title: "Health & Wellness",
+        content: "Learn about maintaining optimal health through balanced nutrition, regular exercise, and mindful practices that enhance your overall well-being. A holistic approach to health encompasses physical, mental, and emotional wellness. Proper nutrition provides the foundation for energy and vitality, while regular physical activity strengthens the body and improves mood. Mental health practices like meditation and stress management are equally important for overall wellness. Sleep quality directly impacts cognitive function and physical recovery. Building strong social connections contributes to emotional resilience and longevity. Preventive care and regular health screenings help identify potential issues early. Understanding the mind-body connection empowers individuals to make informed decisions about their health and create sustainable lifestyle changes that promote long-term wellness."
+      },
+      3: {
+        title: "Education Excellence",
+        content: "Explore innovative learning methodologies and educational approaches that foster creativity, critical thinking, and lifelong learning in students. Modern education is evolving beyond traditional classroom models to embrace personalized learning experiences. Technology integration enhances engagement through interactive content and virtual learning environments. Project-based learning encourages students to apply knowledge to real-world challenges. Collaborative learning builds communication skills and teamwork abilities. Assessment methods are shifting from standardized testing to portfolio-based evaluations that showcase student growth. Social-emotional learning addresses the whole child, developing empathy and resilience alongside academic skills. Teacher professional development ensures educators stay current with best practices. The goal is to prepare students not just for tests, but for success in an ever-changing world that demands adaptability and continuous learning."
+      },
+      4: {
+        title: "Business Growth",
+        content: "Discover proven strategies for scaling your business, from startup fundamentals to advanced growth hacking techniques that drive sustainable success. Successful business growth requires a combination of strategic planning, market understanding, and operational excellence. Customer acquisition and retention strategies form the foundation of sustainable growth. Data-driven decision making helps identify opportunities and optimize performance. Building strong teams and company culture supports scalability and innovation. Financial management and funding strategies provide the resources needed for expansion. Digital marketing and social media presence are essential for reaching modern consumers. Partnerships and strategic alliances can accelerate growth and market penetration. Continuous innovation and adaptation to market changes ensure long-term competitiveness. The key is balancing rapid growth with maintaining quality and customer satisfaction throughout the scaling process."
+      },
+      5: {
+        title: "Sustainable Living",
+        content: "Learn practical ways to reduce your environmental footprint while maintaining a comfortable lifestyle through eco-friendly choices and sustainable practices. Sustainable living involves making conscious decisions that minimize environmental impact while maximizing quality of life. Energy efficiency in homes through better insulation, LED lighting, and smart thermostats reduces both costs and carbon emissions. Sustainable transportation options like cycling, public transit, and electric vehicles decrease pollution. Waste reduction through recycling, composting, and mindful consumption helps preserve natural resources. Supporting local and organic food systems reduces transportation emissions and promotes healthier eating. Water conservation techniques protect this precious resource for future generations. Choosing sustainable products and supporting environmentally responsible companies drives market demand for green alternatives. Small daily choices, when multiplied across communities, create significant positive environmental impact."
+      },
+      6: {
+        title: "Creative Arts",
+        content: "Explore various forms of artistic expression from traditional painting and sculpture to digital art and multimedia installations that inspire creativity. The creative arts encompass a vast spectrum of human expression that enriches culture and society. Traditional mediums like painting, drawing, and sculpture continue to evolve with new techniques and materials. Digital art and computer graphics have opened entirely new realms of creative possibility. Performance arts including theater, dance, and music create shared experiences that connect communities. Literature and poetry capture the human experience in words that resonate across generations. Film and video production combine multiple art forms to tell compelling stories. Interactive and multimedia installations engage audiences in immersive experiences. Art therapy demonstrates the healing power of creative expression. The democratization of creative tools through technology has enabled more people than ever to participate in artistic creation and share their unique perspectives with the world."
+      },
+      7: {
+        title: "Community Building",
+        content: "Understand the importance of strong communities and learn effective strategies for bringing people together to create positive social impact. Strong communities are the foundation of healthy societies, providing support, connection, and shared purpose. Effective community building starts with identifying common interests and values that unite diverse groups of people. Communication platforms and regular gatherings help maintain connections and facilitate collaboration. Volunteer opportunities allow community members to contribute their skills while building relationships. Local events and celebrations create shared experiences that strengthen community bonds. Inclusive leadership ensures all voices are heard and valued in community decisions. Addressing local challenges collectively builds problem-solving capacity and resilience. Mentorship programs connect experienced community members with newcomers. The goal is creating environments where people feel they belong, can contribute meaningfully, and work together toward common goals that benefit everyone."
+      },
+      8: {
+        title: "Global Perspectives",
+        content: "Gain insights into different cultures, international relations, and global challenges that shape our interconnected world and future generations. Understanding global perspectives is essential in our increasingly connected world where local actions have international implications. Cultural awareness and sensitivity promote better communication and cooperation across borders. International trade and economic relationships create both opportunities and challenges for nations. Global challenges like climate change, poverty, and disease require coordinated international responses. Diplomatic relations and conflict resolution skills are crucial for maintaining peace and stability. Language learning and cultural exchange programs build bridges between communities. Technology has made global communication instantaneous, but also highlighted digital divides. Migration and demographic changes are reshaping societies worldwide. The key is developing empathy and understanding for different viewpoints while working together on shared challenges that affect all humanity."
+      },
+      9: {
+        title: "Innovation Lab",
+        content: "Dive into experimental projects and breakthrough innovations that push the boundaries of what's possible in science, technology, and human achievement. Innovation labs serve as incubators for groundbreaking ideas that challenge conventional thinking and explore uncharted territories. Research and development in these environments often leads to unexpected discoveries that transform entire industries. Collaborative spaces bring together diverse expertise to tackle complex problems from multiple angles. Rapid prototyping and iterative testing allow for quick validation and refinement of concepts. Failure is embraced as a learning opportunity that provides valuable insights for future attempts. Cross-disciplinary approaches combine knowledge from different fields to create novel solutions. Emerging technologies like nanotechnology, synthetic biology, and quantum computing are opening new frontiers. The goal is fostering an environment where creativity and scientific rigor combine to push the boundaries of human knowledge and capability."
+      },
+      10: {
+        title: "Future Trends",
+        content: "Stay ahead of the curve by exploring emerging trends and predictions that will shape tomorrow's world in technology, society, and culture. Understanding future trends helps individuals and organizations prepare for coming changes and opportunities. Demographic shifts including aging populations and urbanization will reshape social structures and economic systems. Climate change will drive innovation in renewable energy, sustainable agriculture, and green technology. Artificial intelligence and automation will transform work, requiring new skills and educational approaches. Biotechnology advances may extend human lifespan and enhance physical and cognitive capabilities. Space exploration and colonization could become reality within decades. Social media and digital communication continue evolving how we connect and share information. Economic models may shift toward sustainability and circular economy principles. The key is maintaining adaptability and continuous learning to thrive in an uncertain but exciting future filled with unprecedented possibilities and challenges."
+      }
+    };
+
+    function openModal(boxNumber) {
+      const modal = document.getElementById('modal');
+      const title = document.getElementById('modalTitle');
+      const content = document.getElementById('modalContent');
+
+      title.textContent = contentData[boxNumber].title;
+      content.textContent = contentData[boxNumber].content;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('modal').addEventListener('click', function (e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+  <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9951bd7e275aff73',t:'MTc2MTU2MzM1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
