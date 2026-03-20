@@ -199,5 +199,49 @@ ________________________________________
 •	50 TOPS NPU
 •	2 in 1 design
 •	One of the cheapest flexible AI laptops
+-------------------------------------------------------------
+
+Role: You are a Top Developer tech
+
+The main concept is to track the emoplyess data, so it should work for laptops. use what ever technology required.And the main data should store, so kindly focus on that if i am doing here and another person also doing from some other laptop and other persons data should visible here and there that should be hter. 
+
+There will be two button one is login tracker and another task tracker.
+There should be one login button the moment they click on it login button it should ask employee id and name, it will create login credential for that. By that exact id task tracker should be tracked. 
+
+I want a tool which can able to capture
+1. Login activity of the user in laptop. 
+2. Login and log out time.
+3. How many times laptops got locked and how much of times with locked laptop. From what time to what time that also shoukld be there.
+
+4. In same tool it can able to these:
+
+5. 1. once someone filled up the data of how many tasks he or she completed in that day that should trigger 2,3 email ids, that i will provide.
+6. 2. That should store the data in candidates profile. 
+3. This should be very clear interface and neat and profeesional.
+4.  I may ask you to modify if it not meets requirement.
+Completely think of this and create fullpacked teck tool this. 
+
+
+it should show 4,5 small dashboard type cards. total productivity time, out of system time, how many times locked the laptop, time count of login to logout. 
+
+Add these in login tracker
+
+There should be one admin login credential in which he or she can look all the users times that saved into it that is 
+ 670067 and name admin. this should be there . if any one tryes to login threough this, that should give admin dash board. 
+
+In admin dashboard it should show all the data of login tracker and task tracker.  it should show names and emloyee id in seriel number if clicks on it then it show their entire data
+
+
+The main copncept of this is, if he is active on the web browser then only it shows, the time I want laptops tracker not the browsers or specific tab. One more thing is 
+
+
+
+
+
+
+
+
+
+
 
 
